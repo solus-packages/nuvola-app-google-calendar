@@ -1,0 +1,18 @@
+name       : nuvola-app-google-calendar
+version    : 1.1
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-google-calendar/archive/1.1.tar.gz : 0aafa9f441c5b7bcd6594a09efee79ecd963c50254b360c64616b0652ac7b933
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : Google Calendar Integration for Nuvola Player 3.
+description: |
+    Integration of Google Calendar into your linux desktop via Nuvola Player.
+builddeps  :
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
